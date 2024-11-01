@@ -1,0 +1,26 @@
+body {
+  width: 90vw;
+  height: 90vh;
+  background-color: green;
+}
+
+#ball {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  position: absolute;
+  background-image: url("images/vecteezy_free-vector-football-texture_112119.png");
+  background-size: 110%;
+  border-radius: 50%;
+  box-shadow: -10px -10px 20px inset, 0px 0px 2px inset, 10px 10px 20px;
+  /* filter: blur(0.3px); */
+}
+
+#vecteezy {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+#obstacle {
+}
