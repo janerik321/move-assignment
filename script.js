@@ -2,6 +2,11 @@ const ball = document.querySelector("#ball");
 const obstacle = document.querySelector("#obstacle");
 const body = document.querySelector("body");
 
+fieldX = 700;
+fieldY = 650;
+body.style.width = `${fieldX}px`;
+body.style.height = `${fieldY}px`;
+
 ball.style.zIndex = "1";
 obstacle.style.width = "100px";
 obstacle.style.height = "100px";
@@ -17,13 +22,13 @@ obstacle.style.left = `${obstacleX}px`;
 obstacle.style.top = `${obstacleY}px`;
 
 window.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowUp" && ballY > 0) {
+  if (e.key === "ArrowUp" && ballY > 5) {
     ballY -= 5;
-  } else if (e.key === "ArrowDown" && ballY < 600) {
+  } else if (e.key === "ArrowDown" && ballY < fieldY - 90) {
     ballY += 5;
-  } else if (e.key === "ArrowLeft" && ballX > 0) {
+  } else if (e.key === "ArrowLeft" && ballX > 5) {
     ballX -= 5;
-  } else if (e.key === "ArrowRight" && ballX < 600) {
+  } else if (e.key === "ArrowRight" && ballX < fieldX - 90) {
     ballX += 5;
   }
   // else if (e.key === " ") {
@@ -43,7 +48,6 @@ window.addEventListener("keydown", (e) => {
     ball.style.top = `${ballY}px`;
     ball.style.left = `${ballX}px`;
     ball.style.backgroundPosition = `${ballX}px ${ballY}px`;
-    // body.style.backgroundColor = "green";
   } else if (e.key === "ArrowUp") {
     ballY += 5;
   } else if (e.key === "ArrowDown") {
@@ -53,21 +57,6 @@ window.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowRight") {
     ballX -= 5;
   }
-
-  // else if (ballX >= obstacleX - 100 && ballX <= obstacleX + 94) {
-  //   ballX = obstacleX - 100;
-  //   body.style.backgroundColor = "red";
-  // } else if (ballX <= obstacleX + 100) {
-  //   ballX = obstacleX + 100;
-  //   body.style.backgroundColor = "purple";
-  // }
-  // else if (ballY >= obstacleY - 100 && ballY <= obstacleY + 94) {
-  //   ballY = obstacleY - 100;
-  //   body.style.backgroundColor = "red";
-  // } else if (ballY <= obstacleY + 100) {
-  //   ballY = obstacleY + 100;
-  //   body.style.backgroundColor = "purple";
-  // }
 });
 
 document.addEventListener("click", (e) => {

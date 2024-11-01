@@ -1,7 +1,8 @@
 body {
-  width: 90vw;
-  height: 90vh;
+  /* width: 90vw;
+  height: 90vh; */
   background-color: green;
+  border: 3px solid white;
 }
 
 #ball {
@@ -23,4 +24,6 @@ body {
 }
 
 #obstacle {
+  text-align: center;
+  border: 3px solid greenyellow;
 }
