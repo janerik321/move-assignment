@@ -44,6 +44,14 @@ window.addEventListener("keydown", (e) => {
     ball.style.left = `${ballX}px`;
     ball.style.backgroundPosition = `${ballX}px ${ballY}px`;
     // body.style.backgroundColor = "green";
+  } else if (e.key === "ArrowUp") {
+    ballY += 5;
+  } else if (e.key === "ArrowDown") {
+    ballY -= 5;
+  } else if (e.key === "ArrowLeft") {
+    ballX += 5;
+  } else if (e.key === "ArrowRight") {
+    ballX -= 5;
   }
 
   // else if (ballX >= obstacleX - 100 && ballX <= obstacleX + 94) {
