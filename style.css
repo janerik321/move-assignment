@@ -1,6 +1,11 @@
+* {
+  margin: 0;
+}
+
 body {
-  /* width: 90vw;
-  height: 90vh; */
+  width: 98vw;
+  height: 96vh;
+  margin: 1vh 1vw;
   background-color: green;
   border: 3px solid white;
 }
@@ -13,8 +18,7 @@ body {
   background-image: url("images/vecteezy_free-vector-football-texture_112119.png");
   background-size: 110%;
   border-radius: 50%;
-  box-shadow: -10px -10px 20px inset, 0px 0px 2px inset, 10px 10px 20px;
-  /* filter: blur(0.3px); */
+  box-shadow: -10px -10px 20px inset, 0px 0px 2px gray inset, 10px 10px 20px;
 }
 
 #vecteezy {
@@ -24,6 +28,10 @@ body {
 }
 
 #obstacle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 3px solid greenyellow;
 }
